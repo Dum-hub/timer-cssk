@@ -26,6 +26,7 @@ const failSounds = [
     'sounds/fail/fail4.mp3',
     'sounds/fail/fail5.mp3',
     'sounds/fail/fail6.mp3',
+    'sounds/fail/fail7.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
