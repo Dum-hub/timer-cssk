@@ -55,7 +55,7 @@ startResetButton.addEventListener('click', () => {
         timeLeft = 270;
         updateTimer();
     } else {
-        timer = setInterval(updateTimer, 500);
+        timer = setInterval(updateTimer, 1000);
         isRunning = true;
         startResetButton.textContent = 'Рестарт';
     }
