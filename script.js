@@ -9,10 +9,10 @@ const failButton = document.getElementById('failButton');
 
 // Звуки для "Сдал" и "Не сдал"
 const successSounds = [
-    'sounds/succes/succes1.mp3',
-    'sounds/succes/succes2.mp3',
-    'sounds/succes/succes3.mp3',
-    'sounds/succes/succes4.mp3',
+    'sounds/success/success1.mp3',
+    'sounds/success/success2.mp3',
+    'sounds/success/success3.mp3',
+    'sounds/success/success4.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
