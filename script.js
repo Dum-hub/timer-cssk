@@ -14,6 +14,8 @@ const successSounds = [
     'sounds/success/success3.mp3',
     'sounds/success/success4.mp3',
     'sounds/success/success5.mp3',
+    'sounds/success/success6.mp3',
+    'sounds/success/success7.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
@@ -23,6 +25,7 @@ const failSounds = [
     'sounds/fail/fail3.mp3',
     'sounds/fail/fail4.mp3',
     'sounds/fail/fail5.mp3',
+    'sounds/fail/fail6.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
@@ -52,7 +55,7 @@ startResetButton.addEventListener('click', () => {
         timeLeft = 270;
         updateTimer();
     } else {
-        timer = setInterval(updateTimer, 1000);
+        timer = setInterval(updateTimer, 500);
         isRunning = true;
         startResetButton.textContent = 'Рестарт';
     }
