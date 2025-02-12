@@ -26,6 +26,10 @@ const failSounds = [
     // Добавьте больше звуков по необходимости
 ];
 
+// Переменные для хранения последнего воспроизведенного звука
+let lastSuccessSound = null;
+let lastFailSound = null;
+
 function updateTimer() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
@@ -55,16 +59,31 @@ startResetButton.addEventListener('click', () => {
 });
 
 successButton.addEventListener('click', () => {
-    playRandomSound(successSounds);
+    playRandomSound(successSounds, 'success');
 });
 
 failButton.addEventListener('click', () => {
-    playRandomSound(failSounds);
+    playRandomSound(failSounds, 'fail');
 });
 
-function playRandomSound(soundArray) {
+function playRandomSound(soundArray, type) {
     if (soundArray.length === 0) return; // Если массив пуст, ничего не воспроизводим
-    const randomSound = soundArray[Math.floor(Math.random() * soundArray.length)];
+
+    let randomSound;
+    do {
+        randomSound = soundArray[Math.floor(Math.random() * soundArray.length)];
+    } while (
+        (type === 'success' && randomSound === lastSuccessSound) ||
+        (type === 'fail' && randomSound === lastFailSound)
+    );
+
+    // Обновляем последний воспроизведенный звук
+    if (type === 'success') {
+        lastSuccessSound = randomSound;
+    } else if (type === 'fail') {
+        lastFailSound = randomSound;
+    }
+
     const audio = new Audio(randomSound);
     audio.play();
 }
