@@ -13,6 +13,7 @@ const successSounds = [
     'sounds/success/success2.mp3',
     'sounds/success/success3.mp3',
     'sounds/success/success4.mp3',
+    'sounds/success/success5.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
