@@ -11,12 +11,17 @@ const failButton = document.getElementById('failButton');
 const successSounds = [
     'sounds/success/success1.mp3',
     'sounds/success/success2.mp3',
+    'sounds/success/success3.mp3',
+    'sounds/success/success4.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
 const failSounds = [
     'sounds/fail/fail1.mp3',
     'sounds/fail/fail2.mp3',
+    'sounds/fail/fail3.mp3',
+    'sounds/fail/fail4.mp3',
+    'sounds/fail/fail5.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
