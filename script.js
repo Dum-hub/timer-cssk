@@ -16,6 +16,8 @@ const successSounds = [
     'sounds/success/success5.mp3',
     'sounds/success/success6.mp3',
     'sounds/success/success7.mp3',
+    'sounds/success/success8.mp3',
+    'sounds/success/success9.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
@@ -27,6 +29,12 @@ const failSounds = [
     'sounds/fail/fail5.mp3',
     'sounds/fail/fail6.mp3',
     'sounds/fail/fail7.mp3',
+    'sounds/fail/fail8.mp3',
+    'sounds/fail/fail9.mp3',
+    'sounds/fail/fail10.mp3',
+    'sounds/fail/fail11.mp3',
+    'sounds/fail/fail12.mp3',
+    'sounds/fail/fail13.mp3',
     // Добавьте больше звуков по необходимости
 ];
 
