@@ -7,11 +7,17 @@ const startResetButton = document.getElementById('startResetButton');
 const successButton = document.getElementById('successButton');
 const failButton = document.getElementById('failButton');
 
-const sounds = [
-    'sounds/sound1.mp3',
-    'sounds/sound2.mp3',
-    'sounds/sound3.mp3',
-    // Добавьте больше мелодий по необходимости
+// Звуки для "Сдал" и "Не сдал"
+const successSounds = [
+    'sounds/success/success1.mp3',
+    'sounds/success/success2.mp3',
+    // Добавьте больше звуков по необходимости
+];
+
+const failSounds = [
+    'sounds/fail/fail1.mp3',
+    'sounds/fail/fail2.mp3',
+    // Добавьте больше звуков по необходимости
 ];
 
 function updateTimer() {
@@ -43,15 +49,16 @@ startResetButton.addEventListener('click', () => {
 });
 
 successButton.addEventListener('click', () => {
-    playRandomSound();
+    playRandomSound(successSounds);
 });
 
 failButton.addEventListener('click', () => {
-    playRandomSound();
+    playRandomSound(failSounds);
 });
 
-function playRandomSound() {
-    const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+function playRandomSound(soundArray) {
+    if (soundArray.length === 0) return; // Если массив пуст, ничего не воспроизводим
+    const randomSound = soundArray[Math.floor(Math.random() * soundArray.length)];
     const audio = new Audio(randomSound);
     audio.play();
 }
